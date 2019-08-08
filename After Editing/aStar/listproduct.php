@@ -1,3 +1,4 @@
+<!--THIS FILE IS NOT TO BE USED. JUST KEPT, IF IN CASE NEEDED IN FUTURE-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,6 +125,7 @@
 }</style>
 </head>
 <body>
+ <!--THIS FILE IS NOT TO BE USED. JUST KEPT, IF IN CASE NEEDED IN FUTURE-->
   <script src="js/jquery-3.2.1.min.js"></script>
     <script src="styles/bootstrap-4.1.3/popper.js"></script>
     <script src="styles/bootstrap-4.1.3/bootstrap.min.js"></script>
@@ -237,5 +239,6 @@ if (snippet.length) {
   });
 }    
 </script>
+<!--THIS FILE IS NOT TO BE USED. JUST KEPT, IF IN CASE NEEDED IN FUTURE-->
 </body>
 </html>
