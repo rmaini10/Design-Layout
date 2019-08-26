@@ -1,4 +1,39 @@
-<!DOCTYPE html>
+<?php
+    if(isset($_POST['name']) &&isset($_POST['email']) &&isset($_POST['num']) && isset($_POST['desc'])){
+        if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['num']) && !empty($_POST['desc']) )
+        {
+            $name= $_POST['name'];
+            $email= $_POST['email'];
+            $num= $_POST['num'];
+            $desc= $_POST['desc'];
+            
+            
+            
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+               echo'Kindly provide valid Email'; 
+            }
+            else
+            {   $to = "batrasudhanshu09@gmail.com";
+                $subject ="kidstation";
+	            $headers = "From : " . $email;
+               $message = $name. "\n". $num. "\n". $desc;
+                if(mail($to,$subject,$message,$headers))
+                {
+                    echo "E-Mail Sent successfully, we will get back to you soon.";
+                }
+                else{
+                    echo"problem in sending email";
+                }
+            }
+        }
+        else{echo'all filled are required';}
+    }else
+    {
+        echo'not ok';
+    }
+
+?>
 <html lang="en">
 
 <head>
@@ -76,20 +111,20 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-box-inner">
-                            <form action="" method="">
+                            <form action="" method="POST">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" for="" name="" value="" placeholder="Your name">
+                                    <input type="text" class="form-control" for="" name="name" value="" placeholder="Your name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" for="" name="" value="" placeholder="Your email">
+                                    <input type="email" class="form-control" for="" name="email" value="" placeholder="Your email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" for="" name="" value="" placeholder="Your number">
+                                    <input type="text" class="form-control" for="" name="num" value="" placeholder="Your number">
                                 </div>
                                 <div class="form-group">
-                                    <textarea rows="4" cols="50" class="form-control" placeholder="Describe yourself here..."></textarea>
+                                    <textarea rows="4" name="desc" cols="50" class="form-control" placeholder="Describe yourself here..."></textarea>
                                 </div>
-                                <button class="btn contactcustom-button"> Submit Now </button>
+                                <button type="submit" class="btn contactcustom-button"> Submit Now </button>
                             </form>
                         </div>
                     </div>
