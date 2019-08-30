@@ -194,7 +194,7 @@
 	}
 	.product
 	{
-		width: calc(100% / 2);
+		width: calc(100% / 4);
 	}
 }
 
@@ -338,7 +338,7 @@
 	}
 	.product
 	{
-		width: 100%;
+		width: calc(100% / 4);
 	}
 	.newsletter_form_container
 	{
