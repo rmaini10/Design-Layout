@@ -82,7 +82,7 @@ include 'header.php';
 						<div class="products_container grid">
 							
 							<!-- Product -->
-							<div class="product grid-item hot">
+							<div class="product grid-item hot"  productid="123" id="pro">
 								<div class="product_inner">
 									<div class="product_image">
 										<img src="images/product_1.jpg" alt="">
@@ -91,7 +91,7 @@ include 'header.php';
 									<div class="product_content text-center">
 										<div class="product_title"><a href="product.html">long red shirt</a></div>
 										<div class="product_price">$39.90</div>
-										<div class="product_button ml-auto mr-auto trans_200"><a href="#"><span>WhatsApp Us</span></a></div>
+										<div class="product_button ml-auto mr-auto trans_200"><a id="getpro" onclick="javascript: order();" href="#"><span>WhatsApp Us</span></a></div>
 									</div>
 								</div>	
 							</div>
@@ -342,5 +342,6 @@ include 'footer.php';
 <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/Isotope/fitcolumns.js"></script>
 <script src="js/categories.js"></script>
+<script src="js/whatsapp.js"></script>
 </body>
 </html>
