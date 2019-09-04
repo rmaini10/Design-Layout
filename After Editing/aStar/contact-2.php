@@ -1,37 +1,34 @@
 <?php
-    if(isset($_POST['name']) &&isset($_POST['email']) &&isset($_POST['num']) && isset($_POST['desc'])){
-        if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['num']) && !empty($_POST['desc']) )
-        {
-            $name= $_POST['name'];
-            $email= $_POST['email'];
-            $num= $_POST['num'];
-            $desc= $_POST['desc'];
-            
-            
-            
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-            {
-               echo'Kindly provide valid Email'; 
-            }
-            else
-            {   $to = "batrasudhanshu09@gmail.com";
-                $subject ="kidstation";
-	            $headers = "From : " . $email;
-               $message = $name. "\n". $num. "\n". $desc;
-                if(mail($to,$subject,$message,$headers))
-                {
-                    echo "E-Mail Sent successfully, we will get back to you soon.";
-                }
-                else{
-                    echo"problem in sending email";
-                }
-            }
-        }
-        else{echo'all filled are required';}
-    }else
-    {
-        echo'not ok';
+$result="";
+if(isset($_POST['submit'])){
+    require 'phpmailer/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+    
+    $mail->HOST='smtp.gmail.com';
+    $mail->Port=587;
+    $mail->SMTPAuth=true;
+    $mail->SMTPSecure='tls';
+    $mail->Username='sudbatra09@gmail.com';
+    $mail->Password='batra4848';
+    
+    $mail->setFrom($_POST['email'],$_POST['name'] );
+    $mail->addAddress('batrasudhanshu09@gmail.com');
+    $mail->addReplyTo($_POST['email'],$_POST['name'] );
+    
+    $mail->isHTML(true);
+    $mail->Subject='From Submission:'.$_POST['subject'];
+    $mail->Body='<h1 align=center>Name:'.$_POST['name'].'<br>Email:'.$_POST['email'].'<br>Message:'.$_POST['msg'].'<br>Email:'.$_POST['num'].'</h1>';
+    
+    if(!$mail->send()){
+        $result="something went wrong";
+        
     }
+    else{
+        $result= "Thanks".$_POST['name']."for contacting us";
+    }
+    
+}
+
 
 ?>
 <html lang="en">
@@ -122,7 +119,7 @@
                                     <input type="text" class="form-control" for="" name="num" value="" placeholder="Your number">
                                 </div>
                                 <div class="form-group">
-                                    <textarea rows="4" name="desc" cols="50" class="form-control" placeholder="Describe yourself here..."></textarea>
+                                    <textarea rows="4" name="msg" cols="50" class="form-control" placeholder="Describe yourself here..."></textarea>
                                 </div>
                                 <button type="submit" class="btn contactcustom-button"> Submit Now </button>
                             </form>
@@ -142,6 +139,7 @@
                     </div>
                 </div>
             </div>
+            <h2 class="row"><?=result;?></h2>
         </contact>
         <?php
             include 'footer.php';
