@@ -113,6 +113,9 @@ if(isset($_POST['submit'])){
                                     <input type="text" class="form-control" for="" name="name" value="" placeholder="Your name">
                                 </div>
                                 <div class="form-group">
+                                    <input type="text" class="form-control" for="" name="subject" value="" placeholder="subject">
+                                </div>
+                                <div class="form-group">
                                     <input type="email" class="form-control" for="" name="email" value="" placeholder="Your email">
                                 </div>
                                 <div class="form-group">
