@@ -63,11 +63,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <div class="super_container">
 
 	<!-- Header -->
-    <?php 
-include 'header.php';
-
-//include 'include/index_card_layout.php';
-?>
+	<?php 
+	include 'header.php';
+	
+	//include 'include/index_card_layout.php';
+	?>
 
 
 	<!-- Products -->
@@ -262,7 +262,11 @@ include 'header.php';
     <span class="close">&times;</span>
     <div id="content"><h1 style="text-align:center;" id="content_title"></h1>
     <div class="row">
-        <div></div>
+        <div class="col-4">
+			<img class="img-responsive" id="product_pic" src = "" alt="">
+		</div>
+		<div class="col-2"></div>
+		<div class="col-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam saepe sint soluta libero provident corrupti magnam ut esse temporibus veniam. Harum perferendis rem alias dolores ipsum minima nulla, atque voluptatum.</div>
     </div>
     </div>
   </div>
@@ -274,11 +278,12 @@ include 'header.php';
 
 	
 	<!-- Footer -->
+
+
 <?php  
-include 'footer.php';
+	include 'footer.php';
 ?>
-
-
+	
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -310,11 +315,15 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
  modal.style.display = "block";
      var x=document.getElementById("myBtn").parentNode.parentNode;
+
     var y=x.children[0].innerHTML;
-   //var z= x.children[2];
-    //console.log(y)
+	
+    
   document.getElementById("content_title").innerHTML = y;
-     
+    
+	var pic = x.parentNode.children[0].children[0].src;
+	document.getElementById("product_pic").src = pic;
+	//console.log(pic);
 }
 
 // When the user clicks on <span> (x), close the modal
