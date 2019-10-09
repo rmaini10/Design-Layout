@@ -15,7 +15,6 @@
 <link rel="stylesheet" type="text/css" href="styles/categories_responsive.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -31,7 +30,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
@@ -40,7 +38,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   border: 1px solid #888;
   width: 80%;
 }
-
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -48,7 +45,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
   color: #000;
@@ -226,7 +222,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 									</div>
 								</div>	
 							</div>
-
 							 Product 
 							<div class="product grid-item new">
 								<div class="product_inner">
@@ -255,20 +250,20 @@ body {font-family: Arial, Helvetica, sans-serif;}
 			</div>
 		</div>
 	</div>
-	<div id="myModal" class="modal">
+    <div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div id="content"><h1 style="text-align:center;" id="content_title"></h1>
-    <div class="row">
-        <div class="col-4">
-			<img class="img-responsive" id="product_pic" src = "" alt="">
-		</div>
-		<div class="col-2"></div>
-		<div class="col-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam saepe sint soluta libero provident corrupti magnam ut esse temporibus veniam. Harum perferendis rem alias dolores ipsum minima nulla, atque voluptatum.</div>
-    </div>
-    </div>
+  <div class="modal-content container">
+        <span class="close">&times;</span>
+        <div id="content"><h1 style="text-align:center;" id="content_title"></h1>
+            <div class="row">
+                <div class="col-sm-8 col-md-6">
+                    <img class="img-responsive" width="100%" height="100%" id="product_pic" src = "" alt="">
+                </div>
+                <!-- <div class="col-sm-1"></div> -->
+                <div class="col-sm-4 col-md-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam saepe sint soluta libero provident corrupti magnam ut esse temporibus veniam. Harum perferendis rem alias dolores ipsum minima nulla, atque voluptatum.</div>
+            </div>
+        </div>
   </div>
 
 </div>
@@ -280,9 +275,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<!-- Footer -->
 
 
-<?php  
-	include 'footer.php';
-?>
+    <?php  
+        include 'footer.php';
+    ?>
 	
 </div>
 
@@ -304,18 +299,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <script>
 // Get the modal
 var modal = document.getElementById("myModal");
-
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
  modal.style.display = "block";
      var x=document.getElementById("myBtn").parentNode.parentNode;
-
     var y=x.children[0].innerHTML;
 	
     
@@ -325,12 +316,10 @@ btn.onclick = function() {
 	document.getElementById("product_pic").src = pic;
 	//console.log(pic);
 }
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
