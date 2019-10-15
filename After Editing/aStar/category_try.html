@@ -122,7 +122,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 			</div>
 		</div>
 	<items>
-			<div class="card">
+<div class="card" productid="123">
   <div class="cardheader">
     <div class="rating">
       <p><i class="fas fa-star"></i> 3.9</p>
@@ -136,11 +136,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <img src="http://cliqq.co.uk/wp-content/uploads/2014/11/WIne-Bottle.jpg" alt="winebottle">
   </div>
 
-  <h3>W<span>ine Bottl</span>e</h3>
+  <h3>Wine Bottle</h3>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
-  <button>Details</button>
+  <button id ="myBtn">Details</button>
 </div>
 	</items>
 		
@@ -156,7 +156,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
                     <img class="img-responsive" width="100%" height="100%" id="product_pic" src = "" alt="">
                 </div>
                 <!-- <div class="col-sm-1"></div> -->
-                <div class="col-sm-4 col-md-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam saepe sint soluta libero provident corrupti magnam ut esse temporibus veniam. Harum perferendis rem alias dolores ipsum minima nulla, atque voluptatum.</div>
+				<div class="col-sm-4 col-md-4">
+					<ul>
+					<li>Product Id : <h3 id ="pro_id"></h3></li>
+					<li>Price : <h3 id ="pro_price"></h3></li>
+					<li id="pro_desc"></li>	
+					</ul>
+				</div>
             </div>
         </div>
   </div>
@@ -201,7 +207,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
- modal.style.display = "block";
+ /* modal.style.display = "block";
      var x=document.getElementById("myBtn").parentNode.parentNode;
     var y=x.children[0].innerHTML;
 	
@@ -210,7 +216,17 @@ btn.onclick = function() {
     
 	var pic = x.parentNode.children[0].children[0].src;
 	document.getElementById("product_pic").src = pic;
-	//console.log(pic);
+	//console.log(pic); */
+	modal.style.display = "block";
+	var x=document.getElementById("myBtn");
+	var title = x.parentNode.children[2].innerHTML;
+	document.getElementById("content_title").innerHTML = title;
+var pic =x.parentNode.children[1].children[0].src;
+document.getElementById("product_pic").src = pic;
+var id =x.parentNode[0].getAttribute(productid);
+	console.log(id);
+	/* var id= $("#myBtn").parent().attr("productid");
+	document.getElementById("pr0_id").innerHTML = id; */
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
