@@ -1,119 +1,66 @@
-
-  share > .btn-multi {
-    position: absolute;
-    z-index: 999;
-    right: 0;
-    bottom: 0;
+ #share{
+    color:#fff;
+    width:50px;
+    text-align:center;
+    margin:auto;
+    position:relative;
   }
-  share > .btn {
-    display: inline-flex;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    padding: 8px 20px;
-    font-size: 14px;
-    background-color: #E91E63;
-    border-radius: 2px;
-    color: white;
-    text-transform: uppercase;
-    border: none;
-    transition: all 0.2s ease-in;
-    background-position: 50%;
-    outline: none !important;
+  #share .line{
+   position:absolute; 
+    width:1px;
+    height:220px;
+    background:#fff;
+    left:29px;
+    top:65px;
   }
-  share > .btn.btn-circle {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    padding: 0 !important;
-    font-size: 18px;
+  #share .share,.icons{
+    width:60px;
+    height:60px;
+    display:inline-block;
+    border-radius:30px;
+    margin:5px auto;
+    cursor:pointer;
+    position:relative;
+    background:#fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAgCAYAAACVf3P1AAAFMklEQVR4Xu2bR5bTQBCGmRMQLoCBA5AOgAlr8ho8MFvSgyXBhCXhAVvCG9bkNcEcgHQAwHMBmBtAfUP3vLJGcpdkaTxqqd+rZ1nu6lD1d1V1dXtmXVuKSmCzMPaEOu4zrZ2Zoo03ha8VUDFNnxC2eQNrK9+AkLIEZFndvunX8jArtJjR11/3PhZlYPG+CG1sAWiQQAEAXhWe60IAy6/yrjyfU2315fmT+z4I9BEbAG/LfC8aRR/LojNOdx2e4YLQDsfwSz7fODwlDdQeMJQU0GN5eUroqfvUHSfdzkn58ZlhZLEB8J3Meb9h3lSpEwDRr0WfaVPfLi+fCO3KkMsfeX/eGS2A1xP6KTSnBaQBtkV+HKY0dkXe3XDvaXSrUJbr9eyxAfC3TCzN/SIvVruWR98I1GlX87q3GhU93g3y5bPDgnUeyAiMLWoA/nCNvJfPA2NaArkwUywDjg2Afj5JEWUtWqtSplnvsnR+0w3gmjIyljE9kkqnLRVdHRYq4RzAXXYRHXnGX1NCANQdYhFvBTpvCgDr5G6TKkuC6JVUIBQLeTdAhCcsUr4K0z4vNIJGXlCwcNvGtHhIfmODQrkjdMk9Z1mG0ODqprisedZtHlov2gL69z5uGxcXdqXyx5CCU35fAh8A10LTgh3nTnSnZ6WRhy0AlyRQZwBqo5LEC56xL5QGxDPy/kFOAJLC2u15tNCey8tjKZYt2b5fLcuBZGAAdXfBxES6oIy0kvaedFZdChZvKS4bU3DNA6HvQqThxgE3q5mREE8DkK30N8XVdZ0kG/KbFTp/a5Bu3QFYNLQYWekGOU27CukRwFV1yQQgHetUDCuilwCZzxNadr9+Ik0FYGgzV7Wi87TPZnJBCCPE5iNkCfO0nayr9w2pcQuD6AsddpxYRdwtx3PEhl0hfwpiGUhTAchinbMIaA3UyXO6M+lw9b4hGDgDxp1CnIxQiqzqpgLQkqKaVJll8ReJ5Yr2vVcYB57ZsnPTO51QiiZtUC0Ai6pqdfmIWTE2VRY86cgpkgWAuFyd6+HML0/mu8oJTaPtGPOAyBFvh2WqMv5bEZZYAOhdL4lDXwDkUaFQpnwaAKm6z1gB6EFIuFWVJcSYjewf0gDISmADQmVWQ8dpNLkyMNnkDYdVa3yNtR8zANHxeiFyn+jfn/mXoQIS2lxeGSkagOxyQb8PEu/Lsz9y80wcIvcdMHlXt1xXGYKMHYAApQo3DKBXZE88AElCkuUmQAzl+LCQ2kyH6peh9LXURswARM76yl1Zcv8gDaXeoQSAHWfJAN9dIcttX1YI1g8T/ULoeFkjrUE7sQMQFbDRnC1JF+wTiCmHae0BQH0VJ8+dNn8mXCQ3WNLcptJMEwCIYPFsfWegJhF0V5gzDy4AoL7ha90VMyB/bNcC8L968shuEoWuNq/eG+TtOxieITS9otn9cq3cUrwFHDnbszDWvE5TLCBq4oSEP6ll/dcjS5W4XTaswf+YJF2w1Zr5/wFskk4y/XvNgZY1/NgByIYUt4n1KpKGGQofhowrW8ECAPWGAobQdWxM8ku3KoImNjiC+lWIDYAHRQVsOPzlk0k00hdm0nfmAwoftwDCe0I91ztXscgBchMGJPM71/ZJwRwRAuXUzXMrZpKJrSXe2ADoZYsxQafdnMIGbPMOPws5eVcEzlg3VgIg47mjGgR0A0d02NQSKwC9PtE7IIRwwRgdnZjGIAE6jwU+C5dYd26FBWJgjB2ABhGUV6UFYH5ZtgDML7NMjhaA+YXZAjC/zDI5/gGaDPuPuMCSywAAAABJRU5ErkJggg==) 0 0 no-repeat; 
+    line-height:100;
+    overflow:hidden;
   }
-  share > .btn-multi input {
-    display: none;
+  #share .share{
+    background:#3FBAD8 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABfUlEQVRYR+2XQYoCMRBFJ268h95DG9w7zgFm5QEUD6CCWxe6F3RmL3oABb2BN9BjuGt/SdJkmk5SrRUEGaEQNN3/paryu1p9RP6kadqGRA+RICqIA2KslDqStIqpD/EF7t91aAwBMYkGoHe+0bt27TOJCbCDaiuQ4X1MgCvEq6ESvx8Aav+NXY8Q9dDu8f9aLAMlhQ3b803oEb5A5YToRDmGAWEymh8SxromvvqIT+07ZECjh42IK8yo/31J1gMFlkkmMjek0sIG8A4QsMwlljQKuppqnKWau+P8OsW0TPs6EeEsAwDgWCatFxW2AXiWiWZ4NM2+66gELwfgluCsm+5XMhOmCbf2kQwIiIKYYziF6MABsdLHsJYDEwGxjYgsk55iiQahrMxyRjTGb6IgpTtbO6IYSGkAUwYuSPSpOABCj+MvR1PLTsUeEN+hen4gyd+9JMj/VBzv1Yz5lJWbigt6gV5KQxYv34Q2CLLgs3jZY+g6a3oqti3+z1R8AxnkwcUTSGj0AAAAAElFTkSuQmCC) 12px center no-repeat;
   }
-  share > .btn-multi input:not(:checked) ~ label {
-    transform: rotate(0);
+  #share  .icons:nth-of-type(1){
+    background-position: -115px center;
   }
-  share > .btn-multi input:not(:checked) ~ label .btn {
-    border-radius: 0;
-    height: 30px;
-    width: 30px;
-    box-shadow: none;
+  #share  .icons:nth-of-type(2){
+    background-position: -48px center;
   }
-  share > .btn-multi input:not(:checked) ~ label .btn:first-child {
-    border-top-left-radius: 100%;
-    transform: translate(25px, 25px);
+  #share  .icons:nth-of-type(3){
+    background-position: 17px center;
   }
-  share > .btn-multi input:not(:checked) ~ label .btn:nth-child(2) {
-    border-top-right-radius: 100%;
-    transform: translate(55px, 25px);
-  }
-  share > .btn-multi input:not(:checked) ~ label .btn:nth-child(3) {
-    border-bottom-left-radius: 100%;
-    transform: translate(25px, 55px);
-  }
-  share > .btn-multi input:not(:checked) ~ label .btn:nth-child(4) {
-    border-bottom-right-radius: 100%;
-    transform: translate(55px, 55px);
-  }
-  share > .btn-multi input:not(:checked) ~ label .btn .icon {
-    opacity: 0;
-  }
-  share > .btn-multi input:not(:checked) ~ label > .icon {
-    opacity: 1;
-    cursor: pointer;
-  }
-  share > .btn-multi label {
-    position: relative;
-    height: 110px;
-    width: 110px;
-    display: block;
-    transform: rotate(45deg);
-    transition: all 0.2s ease-in;
-    cursor: default;
-    border-radius: 30px;
-  }
-  share > .btn-multi label .btn {
-    position: absolute;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-  share > .btn-multi label .btn:nth-child(2) {
-    transform: translate(60px, 0);
-  }
-  share > .btn-multi label .btn:nth-child(3) {
-    transform: translate(0, 60px);
-  }
-  share > .btn-multi label .btn:nth-child(4) {
-    transform: translate(60px, 60px);
-  }
-  share > .btn-multi label .btn .icon {
-    opacity: 1;
-    transition: all 0.15s ease-in-out;
-    transform: rotate(-45deg);
-  }
-  share > .btn-multi label > .icon {
-    color: white;
-    position: absolute;
-    border-radius: 50%;
-    display: flex;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    width: 60px;
-    top: 25px;
-    left: 25px;
-    opacity: 0;
-    transition: all 0.25s ease-in-out;
-  }
-  share > .btn-multi label .icon {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-
   
+  #share .line{
+    height:0;
+  }
+  #share  .icons{
+    -webkit-transform: scale(0) translate3d(0,0,0);
+    -webkit-transition: -webkit-transform 0.0001s linear,background 0.0001s ease;
+  }
+  
+  
+  #share:hover i{
+    height:190px;
+    -webkit-transition: height 0.0001s linear;
+    -webkit-transition-duration:.3s;
+  }
+  #share:hover .icons{
+    background-color:#FFFF33;
+    -webkit-transform: scale(1) translate3d(0,0,0);
+    -webkit-transition-delay: 0.1s,0.0001s;
+    -webkit-transition-duration: 0.3s, 0.4s;
+  }
+  #share:hover .icons:nth-of-type(2){
+    -webkit-transition-delay: 0.2s,0.0001s;
+  }
+  #share:hover .icons:nth-of-type(3){
+    -webkit-transition-delay: 0.3s, 0.001s;
+  } 
