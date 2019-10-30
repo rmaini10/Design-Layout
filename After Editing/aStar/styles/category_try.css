@@ -47,7 +47,24 @@
   }
   
   /* BUTTON */
-  button {
+
+  .btn_1{
+    position: absolute;
+    bottom: 50px;
+    left: 10%;
+    background-color:whitesmoke;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    padding: 10px 0;
+    box-shadow: none;
+    width: 80%;
+    border-radius: 5px;
+    color: black;
+    border: dashed;
+ 
+  }
+  .btn_2{
     position: absolute;
     bottom: 0;
     left: 10%;
@@ -61,6 +78,7 @@
     border-radius: 5px;
     color: white;
     border: none;
+
   }
   
   button:hover {
