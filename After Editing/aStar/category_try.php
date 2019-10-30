@@ -196,7 +196,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <!-- Modal content -->
   <div class="modal-content container">
         <span class="close">&times;</span>
-        <div id="content"><h1 style="text-align:center;" id="content_title"></h1>
+        <div class="row">
+        <div class="col-10" id="content"><h1 style="text-align:center;" id="content_title"></h1>
             <div class="row">
                 <div class="col-sm-6 col-md-6">
                     <img class="img-responsive" width="100%" height="100%" id="product_pic" src = "" alt="">
@@ -211,15 +212,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 					<button id ="whatsapp" onclick ="whatsapp()" class="btn btn-success btn-lg">WhatsApp Us</button>
 				
 				</div>
-				/* <div id="share" class="col-sm-2 col-md-2">
+				
+            </div>
+        </div>
+        <div class="col-2" id="share" class="col-sm-2 col-md-2">
                 <span class="share">Share</span>
                 <i class="line"></i>
                 <a href="#" class="icons">Twitter</a>
                 <a href="#" class="icons">Facebook</a>
                 <a href="#" class="icons">Mail</a>
-                </div>
-                 */
-            </div>
+        </div>
         </div>
   </div>
 
